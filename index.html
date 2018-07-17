@@ -53,13 +53,12 @@ a,
 }
 
 /* Navbar links */
-#navbar a {
+#navbar p {
   float: left;
   display: block;
-  color: #f2f2f2;
+  color: #000;
   text-align: center;
-  padding: 14px;
-  text-decoration: none;
+  padding: 5px;
 }
 
 /* Page content */
@@ -76,6 +75,10 @@ a,
 /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
 .sticky + .content {
   padding-top: 60px;
+}
+
+#navbar {
+background: #FFFFFF;
 }
 /* sticky navbar end */
     </style>
@@ -105,38 +108,38 @@ a,
         <br>
         <br>
         <br>
-        <div id="navbar">
+        <div class="row" id="navbar">
                  <thead style="overflow: none;">
                         <tr>
                             <th style="width: 150px;">
-                                <p class="header-title">COUNTY</p>
+                                <p class="header-title nav county" style="padding-right: 5.5%;"><strong>COUNTY</strong></p>
                             </th>
-                            <th>QCD</th>
+                            <th><p class="header-title nav qcd" style="padding-right: 0%;">QCD</p></th>
                             <th>
-                                <p class="header-title c">ATKINS FEE / IF NOT EXEMPT FOR QCD/ADOT/ACOT</p>
-                            </th>
-                            <th>
-                                <p class="header-title c">ADDITIONAL PAGES</p>
+                                <p class="header-title nav c atkins" style="padding-right: 0%;"><strong>ATKINS <br>FEE</strong></p>
                             </th>
                             <th>
-                                <p class="header-title">ADOT</p>
+                                <p class="header-title nav c additional" style="padding-right: 0%;">ADD. <br>PAGES</p>
                             </th>
                             <th>
-                                <p class="header-title">ACOT</p>
+                                <p class="header-title nav adot" style="padding-right: 2%;"><strong>ADOT</strong></p>
                             </th>
                             <th>
-                                <p class="header-title">REVOCATION</p>
+                                <p class="header-title nav acot" style="padding-right: 1%;">ACOT</p>
                             </th>
                             <th>
-                                <p class="header-title c">DEEDS OF TRUST</p>
-                            </th>
-                            <th class="l">
-                                <p class="header-title c">SUBSTITUTION OF TRUSTEE AND DEED OF FULL RECONVEYANCE</p>
+                                <p class="header-title nav revocation" style="padding-right: 0%;"><strong>REVOC<br>ATION</strong></p>
                             </th>
                             <th>
-                                <p class="header-title c">DEED OF TRUST AND ASSIGNMENT OF RENTS</p>
+                                <p class="header-title nav c deedoft" style="padding-right: 6%;">DEEDS OF <br>TRUST</p>
                             </th>
-                            <th style="width: 150px;">PHONE NUMBER</th>
+                            <th>
+                                <p class="header-title nav c sub" style="padding-right: 15%;"><strong>SUBSTITUTION <br>OF TRUSTEE <br>AND DEED <br>OF FULL <br>RECONVEYANCE</strong></p>
+                            </th>
+                            <th>
+                                <p class="header-title nav c dotas" style="padding-right: 8%;">DEED OF <br>TRUST AND <br>ASSIGNMENT <br>OF RENTS</p>
+                            </th>
+                            <th><p class="header-title nav num" style="padding-right: 0%;"><strong>PHONE <br>NUMBER</strong></p></th>
                         </tr>
                     </thead>
         </div>
@@ -875,13 +878,13 @@ a,
                         </tr>
                         <tr style="background: #FFFE54;">
                             <th >YUBA</th>
-                            <td>$14.00</td>
+                            <td>$15.00</td>
                             <td class="c">$75.00</td>
                             <td>$3.00</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>$15.00</td>
+                            <td>$15.00</td>
+                            <td>$15.00</td>
+                            <td>$15.00</td>
                             <td class="c">$13.00 per title + $1.00 conformed copy</td>
                             <td></td>
                             <td></td>
@@ -1088,6 +1091,26 @@ a,
             <p class="credit"><a class="pepLink" href="https://github.com/leenbean16/ccrf">github.com/leenbean16/ccrf</a></p>
         </div>
     </div>
+
+
+    <script>
+        window.onscroll = function() {myFunction()};
+
+// Get the navbar
+var navbar = document.getElementById("navbar");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
 </body>
 
 </html>
