@@ -38,7 +38,6 @@ a,
 }
 .table td,
 .table th {
-    border: 1px solid #000000;
     border-width: 0 0 1px;
     padding: .5em .25em;
     vertical-align: top;
@@ -51,7 +50,6 @@ a,
 /* Style the navbar */
 #navbar {
   overflow: hidden;
-  background-color: #333;
 }
 
 /* Navbar links */
@@ -66,7 +64,6 @@ a,
 
 /* Page content */
 .content {
-  padding: 16px;
 }
 
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
@@ -108,11 +105,8 @@ a,
         <br>
         <br>
         <br>
-        <div class="columns">
-            <div class="column" id="navbar">
-                <p class='countyListTitle'><strong></strong></p>
-                <table class="table is-hoverable">
-                    <thead style="overflow: none;">
+        <div id="navbar">
+                 <thead style="overflow: none;">
                         <tr>
                             <th style="width: 150px;">
                                 <p class="header-title">COUNTY</p>
@@ -145,6 +139,11 @@ a,
                             <th style="width: 150px;">PHONE NUMBER</th>
                         </tr>
                     </thead>
+        </div>
+        <div class="columns">
+            <div class="column">
+                <p class='countyListTitle'><strong></strong></p>
+                <table class="table is-hoverable">
                     <tbody>
                         <tr>
                             <th>ALAMEDA</th>
